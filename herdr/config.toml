@@ -1,0 +1,51 @@
+onboarding = false
+[ui]
+agent_panel_sort = "spaces"
+# Status remains recognizable even when peripheral color vision or display
+# contrast makes the colored dots hard to distinguish.
+status_indicators = "symbols"
+
+[theme]
+name = "catppuccin"
+
+[theme.custom]
+# High-contrast dark surfaces for the sidebar, selection, and pane chrome.
+sidebar_bg = "#11111b"
+active_row_bg = "#313244"
+selection_bg = "#45475a"
+panel_bg = "#181825"
+text = "#f5f7ff"
+accent = "#89b4fa"
+green = "#a6e3a1"
+blue = "#89b4fa"
+red = "#f38ba8"
+yellow = "#f9e2af"
+
+[ui.sidebar.agents]
+# Keep the machine, workspace, and agent identity legible in the sidebar.
+# Herdr otherwise renders these contextual labels dimmer than the status icon.
+rows = [
+  [
+    { token = "state_icon", fg = "#89b4fa", dim = false },
+    { token = "machine", fg = "#f9e2af", bold = true, dim = false },
+    { token = "workspace", fg = "#89b4fa", bold = true, dim = false },
+    { token = "tab", fg = "#b4befe", bold = true, dim = false },
+  ],
+  [
+    { token = "agent", fg = "#cdd6f4", bold = true, dim = false },
+  ],
+]
+
+[ui.sidebar.spaces]
+# Match space identity to the high-contrast agent rows without flattening
+# Git's semantic ahead/behind colors.
+rows = [
+  [
+    { token = "state_icon", fg = "#89b4fa", dim = false },
+    { token = "workspace", fg = "#f5f7ff", bold = true, dim = false },
+  ],
+  [
+    { token = "branch", fg = "#b4befe", dim = false },
+    { token = "git_status", bold = true, dim = false },
+  ],
+]
