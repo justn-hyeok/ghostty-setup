@@ -1,0 +1,33 @@
+# Orca-aligned terminal defaults
+theme = dark:Ghostty Default Style Dark,light:Builtin Tango Light
+font-family = "D2KodingLigature Nerd Font Mono"
+font-family-bold = "D2KodingLigature Nerd Font Mono Bold"
+font-size = 14
+
+cursor-style = bar
+cursor-style-blink = true
+shell-integration = zsh
+shell-integration-features = cursor,title,ssh-env,ssh-terminfo
+
+window-padding-x = 8
+window-padding-y = 4
+window-padding-balance = true
+window-inherit-working-directory = true
+tab-inherit-working-directory = true
+split-inherit-working-directory = true
+window-inherit-font-size = true
+window-theme = auto
+window-save-state = always
+
+unfocused-split-opacity = 0.8
+split-divider-color = 3f3f46
+scrollback-limit = 5000
+copy-on-select = false
+right-click-action = context-menu
+focus-follows-mouse = false
+mouse-hide-while-typing = false
+
+# Notify when an unfocused command runs for at least five seconds.
+notify-on-command-finish = unfocused
+notify-on-command-finish-action = notify
+notify-on-command-finish-after = 5s
